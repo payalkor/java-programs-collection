@@ -16,7 +16,7 @@ public class JTablee {
        
        try{
             Class.forName("org.postgresql.Driver");
-            Connection c=DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgreuser");
+            Connection c=DriverManager.getConnection(url,username,password);
             
             Statement s=c.createStatement();
             ResultSet r=s.executeQuery("select * from teacher");
