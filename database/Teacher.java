@@ -9,7 +9,7 @@ public class Teacher {
     String tsub;
     try{
          Class.forName("org.postgresql.Driver");
-         Connection c=DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgreuser");
+         Connection c=DriverManager.getConnection(url,username,password);
          PreparedStatement ps=c.prepareStatement("insert into teacher values(?,?,?)");
          System.out.println("Enter 5 Rescords : ");
          for(int i=0;i<5;i++){
